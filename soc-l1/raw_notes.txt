@@ -1,0 +1,456 @@
+SOC L1 Analyst & Blue Team — Professional Study Notes
+1. Introduction to Blue Team
+Definition
+
+The Blue Team is the defensive cybersecurity team responsible for protecting an organization’s systems, network, and data from cyber threats and attacks.
+
+Their primary objective is to:
+
+Detect attacks
+
+Prevent breaches
+
+Respond to incidents
+
+Monitor systems continuously
+
+Protect organizational assets
+
+Blue Team members act as the organization’s cybersecurity defenders.
+
+Blue Team Responsibilities
+
+Key functions include:
+
+Security monitoring
+
+Incident detection
+
+Incident response
+
+Log analysis
+
+Threat detection
+
+Threat hunting
+
+System protection and hardening
+
+Blue Team vs Red Team
+Blue Team	Red Team
+Defensive security	Offensive security
+Protect systems	Attack systems (ethically)
+Detect incidents	Simulate attacks
+Monitor alerts	Find vulnerabilities
+2. Organizational Security Hierarchy
+
+Cybersecurity operates within a structured hierarchy in an organization.
+
+Executive Level
+CEO (Chief Executive Officer)
+
+Responsible for overall business operations
+
+Focuses on company strategy and growth
+
+Does not manage technical cybersecurity directly
+
+CISO (Chief Information Security Officer)
+
+Head of cybersecurity
+
+Responsible for overall security strategy
+
+Designs and oversees security programs
+
+Reports to CEO or executive leadership
+
+Security Management Level
+Security Manager / SOC Manager
+
+Manages daily cybersecurity operations
+
+Supervises SOC team
+
+Handles incident escalation
+
+Operational Level
+
+This level includes technical cybersecurity staff such as:
+
+SOC Analysts
+
+Security Engineers
+
+Incident Responders
+
+Threat Intelligence Analysts
+
+3. Security Departments in an Organization
+
+Large organizations divide cybersecurity into specialized departments.
+
+3.1 Blue Team (Defensive Security)
+
+Responsible for defending against cyber attacks.
+
+Includes:
+
+SOC Analysts
+
+Incident Response Team
+
+Security Engineers
+
+Threat Intelligence Analysts
+
+Digital Forensics Analysts
+
+Primary functions:
+
+Monitor systems
+
+Detect attacks
+
+Respond to incidents
+
+3.2 Red Team (Offensive Security)
+
+Responsible for simulating attacks.
+
+Includes:
+
+Penetration Testers
+
+Ethical Hackers
+
+Primary functions:
+
+Find vulnerabilities
+
+Test defenses
+
+Improve security posture
+
+3.3 GRC Team (Governance, Risk, Compliance)
+
+Responsible for policies and compliance.
+
+Functions include:
+
+Creating security policies
+
+Managing compliance standards (PCI DSS, ISO 27001, GDPR)
+
+Conducting security audits
+
+Risk assessment
+
+4. Security Operations Center (SOC)
+Definition
+
+The SOC is the central hub responsible for monitoring, detecting, and responding to cybersecurity incidents.
+
+SOC operates 24/7 to protect the organization.
+
+SOC is the first line of defense.
+
+SOC Structure
+
+Typical SOC hierarchy:
+
+SOC Manager
+
+SOC Engineer
+
+SOC L2 Analyst
+
+SOC L1 Analyst
+
+5. SOC Roles and Responsibilities
+5.1 SOC L1 Analyst (Entry-Level Role)
+Role Overview
+
+SOC L1 Analyst is the first responder to security alerts.
+
+Responsibilities
+
+Monitor SIEM alerts
+
+Triage security alerts
+
+Identify false positives
+
+Escalate incidents to L2
+
+Perform basic investigation
+
+Tools Used
+
+SIEM (Splunk, Sentinel, QRadar)
+
+EDR (CrowdStrike, Defender)
+
+Log monitoring tools
+
+Objective
+
+Identify and escalate potential threats quickly.
+
+5.2 SOC L2 Analyst
+Role Overview
+
+SOC L2 Analysts perform deeper investigations.
+
+Responsibilities
+
+Investigate confirmed incidents
+
+Analyze malware
+
+Analyze attacker behavior
+
+Respond to incidents
+
+5.3 SOC Engineer
+Role Overview
+
+SOC Engineers manage and configure security tools.
+
+Responsibilities
+
+Configure SIEM systems
+
+Configure EDR tools
+
+Create detection rules
+
+Maintain security infrastructure
+
+5.4 SOC Manager
+Role Overview
+
+SOC Manager oversees SOC operations.
+
+Responsibilities
+
+Manage SOC team
+
+Coordinate incident response
+
+Improve SOC efficiency
+
+6. Cyber Incident Response Team (CIRT / CERT / CSIRT)
+Definition
+
+CIRT handles serious cybersecurity incidents and breaches.
+
+They are the advanced response team.
+
+Responsibilities
+
+Incident response
+
+Malware analysis
+
+Digital forensics
+
+Threat containment
+
+Incident recovery
+
+When CIRT is used
+
+Examples:
+
+Ransomware attacks
+
+Major breaches
+
+Advanced persistent threats
+
+7. Specialized Blue Team Roles
+
+Large organizations include specialized security roles.
+
+Digital Forensics Analyst
+
+Responsibilities:
+
+Analyze compromised systems
+
+Collect digital evidence
+
+Investigate breaches
+
+Threat Intelligence Analyst
+
+Responsibilities:
+
+Research threat actors
+
+Analyze attacker techniques
+
+Monitor emerging threats
+
+AppSec Engineer (Application Security)
+
+Responsibilities:
+
+Secure software applications
+
+Identify application vulnerabilities
+
+Improve software security
+
+Security Engineer
+
+Responsibilities:
+
+Build and maintain security infrastructure
+
+Configure tools
+
+Improve detection systems
+
+8. SOC Career Path
+
+SOC L1 is the starting point for many cybersecurity careers.
+
+Typical Career Progression
+
+SOC L1 Analyst
+↓
+SOC L2 Analyst
+↓
+SOC L3 Analyst / Security Engineer
+↓
+Incident Responder / Threat Hunter
+↓
+Security Architect
+↓
+SOC Manager
+↓
+CISO
+
+9. Internal SOC vs MSSP
+
+Organizations may operate their own SOC or outsource to MSSP.
+
+Internal SOC
+
+Definition:
+SOC operated inside the organization.
+
+Characteristics:
+
+Protects one organization
+
+Lower pressure
+
+Fewer tools
+
+Stable environment
+
+MSSP (Managed Security Services Provider)
+
+Definition:
+External company providing SOC services to multiple clients.
+
+Characteristics:
+
+Protects multiple organizations
+
+Higher pressure
+
+More alerts
+
+Faster learning
+
+10. Key Skills Required for SOC L1 Analyst
+Technical Skills
+
+Networking fundamentals
+
+Log analysis
+
+SIEM tools
+
+Windows security logs
+
+Linux fundamentals
+
+Incident triage
+
+Analytical Skills
+
+Problem solving
+
+Threat identification
+
+Alert analysis
+
+Professional Skills
+
+Communication
+
+Incident reporting
+
+Documentation
+
+11. SOC L1 Analyst Workflow
+
+Typical workflow:
+
+Alert generated in SIEM
+
+SOC L1 reviews alert
+
+Investigates alert
+
+Determines severity
+
+Escalates if necessary
+
+SOC L2 investigates further
+
+Incident Response Team handles major incidents
+
+12. Key Concepts Summary (Important for Interviews)
+
+SOC = Security Operations Center
+Blue Team = Defensive security team
+SOC L1 = Entry-level analyst
+SOC L2 = Incident investigator
+SOC Engineer = Tool configuration expert
+CERT / CIRT = Incident response team
+GRC = Compliance and policy team
+MSSP = Outsourced SOC provider
+
+13. Real-World Example Scenario
+
+Attack flow:
+
+Attacker launches brute force attack
+
+SIEM detects suspicious activity
+
+SOC L1 triages alert
+
+SOC L2 investigates
+
+CERT responds if serious
+
+Security engineer improves detection
+
+14. Importance of SOC L1 Role
+
+SOC L1 provides:
+
+Real-world cybersecurity experience
+
+Exposure to attacks
+
+Foundation for advanced roles
+
+Essential career starting point
