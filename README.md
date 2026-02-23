@@ -42,15 +42,15 @@ It contains structured writeups, commands used, tools practiced, and key concept
 ---
 
 ## Repository Structure
-tryhackme-writeups/
-│
-├── room-name/
-│ ├── writeup.md
-│ ├── commands.md
-│
-├── tools-learned.md
-├── README.md
-
+tryhackme-writeups/<br>
+│<br>
+├── room-name/<br>
+│ ├── writeup.md<br>
+│ ├── commands.md<br>
+│<br>
+├── tools-learned.md<br>
+├── README.md<br>
+<br>
 Each room folder contains:
 
 - Objective of the lab
