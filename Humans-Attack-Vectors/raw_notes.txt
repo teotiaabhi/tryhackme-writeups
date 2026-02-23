@@ -1,0 +1,411 @@
+Human Element in Cyber Security — Raw Notes
+1. Core Concept: Humans Are the Weakest Link
+
+The most vulnerable part of any cybersecurity system is the human element, not the technology.
+
+Attackers target humans because:
+
+Humans trust easily
+
+Humans make mistakes
+
+Humans respond to urgency and fear
+
+Humans can be manipulated psychologically
+
+This attack method is called Social Engineering.
+
+2. Social Engineering Definition
+
+Social Engineering is a psychological attack where attackers manipulate people into performing actions that compromise security.
+
+Instead of exploiting technical vulnerabilities, attackers exploit human behavior and emotions.
+
+Goal of social engineering:
+
+Steal credentials
+
+Install malware
+
+Gain unauthorized access
+
+Bypass security controls
+
+3. Psychological Principles Used in Social Engineering
+
+Social engineering attacks rely on three main psychological triggers:
+
+Trust
+
+Attacker pretends to be a trusted entity such as:
+
+IT department
+
+Bank
+
+Company executive
+
+Government authority
+
+Victim trusts attacker and follows instructions.
+
+Urgency
+
+Attacker creates pressure to force quick action.
+
+Examples:
+
+"Your account will be locked immediately"
+
+"Urgent payment required"
+
+Victim acts without thinking.
+
+Fear or Curiosity
+
+Attacker triggers emotional response.
+
+Examples:
+
+Fear: "Your system is compromised"
+
+Curiosity: "You received a confidential document"
+
+Victim interacts with malicious content.
+
+4. Phishing Attacks
+
+Phishing is the most common social engineering attack.
+
+Definition:
+Phishing is a fraudulent email or message designed to trick users into revealing credentials or installing malware.
+
+Phishing attack flow:
+
+Attacker sends fake email
+
+Victim clicks malicious link or opens attachment
+
+Victim enters credentials or runs malware
+
+Attacker gains access
+
+Common phishing indicators:
+
+Fake sender domain
+
+Suspicious links
+
+Urgent or threatening language
+
+Unexpected attachments
+
+Impact:
+
+Credential theft
+
+Account compromise
+
+Unauthorized access
+
+5. Malware Delivery Attacks
+
+Attackers trick users into installing malware disguised as legitimate software.
+
+Common techniques:
+
+Fake software updates
+Fake browser updates
+Malicious attachments
+Fake downloads
+
+Example:
+
+Fake Firefox update downloads malware instead of real update.
+
+Types of malware installed:
+
+Data stealers
+
+Keyloggers
+
+Remote access trojans (RAT)
+
+Ransomware
+
+Impact:
+
+Data theft
+
+System compromise
+
+Unauthorized remote access
+
+6. Fake CAPTCHA Attacks
+
+Attackers create fake CAPTCHA verification pages.
+
+Victim is instructed to:
+
+Press keyboard combinations
+
+Execute commands
+
+Download files
+
+These actions execute malicious code.
+
+Goal:
+
+Install malware silently
+
+7. Deepfake Attacks
+
+Deepfakes use AI-generated audio or video to impersonate real people.
+
+Attackers impersonate:
+
+Company executives
+
+Managers
+
+Business partners
+
+Example:
+
+Finance employee receives deepfake video call from fake CEO requesting urgent payment.
+
+Impact:
+
+Financial loss
+
+Credential compromise
+
+Business compromise
+
+8. Impersonation Attacks
+
+Attackers pretend to be trusted individuals.
+
+Examples:
+
+Fake IT support calls
+Fake managers
+Fake HR personnel
+
+Goal:
+
+Obtain passwords
+
+Gain access
+
+Install malware
+
+Example scenario:
+
+Attacker calls employee pretending to be IT support and requests credentials.
+
+9. Other Human-Targeted Attacks
+
+Additional social engineering methods include:
+
+USB drop attacks
+Fake job offers
+Physical impersonation
+Insider threats
+
+Example:
+
+Malicious USB left in office. Employee inserts USB → malware installs.
+
+10. Mitigation vs Detection
+
+Cyber defense has two main components:
+
+Mitigation
+Detection
+
+Mitigation Definition
+
+Mitigation focuses on preventing attacks before they succeed.
+
+Goal:
+
+Reduce attack success rate
+
+Protect users from common threats
+
+Examples of mitigation controls:
+
+Anti-phishing tools
+Antivirus / EDR solutions
+Security awareness training
+Access controls
+
+Mitigation reduces SOC workload.
+
+Detection Definition
+
+Detection focuses on identifying attacks that bypass mitigation.
+
+SOC performs detection.
+
+SOC detects:
+
+Suspicious logins
+
+Malware execution
+
+Unusual activity
+
+Unauthorized access
+
+SOC investigates and responds to incidents.
+
+SOC is last line of defense.
+
+11. Anti-Phishing Solutions
+
+Anti-phishing tools block phishing emails before users see them.
+
+Functions:
+
+Email filtering
+
+Link scanning
+
+Attachment scanning
+
+Benefit:
+
+Prevents credential theft.
+
+12. Antivirus / EDR Solutions
+
+Endpoint Detection and Response tools protect endpoints.
+
+Functions:
+
+Detect malware
+
+Block malicious processes
+
+Monitor system activity
+
+Examples:
+
+Microsoft Defender
+CrowdStrike
+SentinelOne
+
+Benefit:
+
+Prevents malware execution.
+
+13. Security Awareness Training
+
+Training employees to recognize attacks.
+
+Employees learn to:
+
+Identify phishing emails
+
+Avoid suspicious links
+
+Verify requests
+
+Report suspicious activity
+
+Benefit:
+
+Reduces successful attacks.
+
+14. Trust But Verify Principle
+
+Employees must verify requests before acting.
+
+Example:
+
+If CEO requests urgent action, employee verifies authenticity before proceeding.
+
+Prevents impersonation attacks.
+
+15. Role of SOC Analyst in Human-Targeted Attacks
+
+SOC analysts are responsible for detecting and investigating attacks.
+
+SOC responsibilities include:
+
+Monitoring security alerts
+Investigating suspicious activity
+Analyzing compromised accounts
+Responding to incidents
+Protecting organization
+
+SOC analysts work with:
+
+IT teams
+HR teams
+Security teams
+
+SOC may also:
+
+Recommend mitigation improvements
+Assist with training
+Help improve security posture
+
+16. SOC Dashboard Investigation Role
+
+SOC analysts investigate:
+
+Employees at risk
+Compromised accounts
+Suspicious activity
+
+SOC analysts also improve:
+
+Security policies
+Mitigation controls
+
+SOC contributes to both detection and prevention.
+
+17. Real-World Attack Flow Example
+
+Attacker sends phishing email
+
+Employee clicks malicious link
+
+Malware installs
+
+Malware communicates with attacker
+
+SIEM detects suspicious activity
+
+SOC investigates alert
+
+SOC contains incident
+
+18. Key SOC Analyst Learning Outcomes
+
+Understanding social engineering attacks
+Recognizing phishing techniques
+Understanding malware delivery methods
+Understanding mitigation vs detection
+Understanding SOC role in incident detection
+Understanding human risk in cybersecurity
+
+19. Key Interview Concepts
+
+Social Engineering = human manipulation attack
+
+Phishing = fake email attack
+
+Mitigation = prevention
+
+Detection = SOC investigation
+
+SOC role = detect and respond to attacks
+
+Humans are primary attack vector
+
+SOC is last line of defense
