@@ -1,0 +1,261 @@
+Systems as Attack Vectors — Raw Notes
+1. Systems as Critical Attack Targets
+
+A system is any device, server, or infrastructure component that stores, processes, or manages data.
+
+Examples of systems include:
+
+Physical servers
+
+Virtual machines
+
+Cloud platforms (Microsoft 365, AWS, Google Cloud)
+
+Email servers
+
+Database servers
+
+Employee laptops
+
+Web servers
+
+Systems are high-value targets because compromising a system gives attackers access to sensitive data, multiple users, and internal infrastructure.
+
+Compromising one user gives limited access, but compromising a system gives large-scale control.
+
+Example:
+Compromising one mailbox affects one user
+Compromising mail server affects thousands of users
+
+2. Attacker Goal: Initial Access
+
+The first step in most attacks is gaining access to a system.
+
+Once attackers gain access, they can:
+
+Steal sensitive data
+
+Install malware or ransomware
+
+Gain administrator privileges
+
+Move laterally within network
+
+Destroy or encrypt data
+
+This phase is called initial access.
+
+3. Human-Led System Attacks
+
+Many system compromises begin with human mistakes.
+
+Examples include:
+
+Weak passwords
+Password reuse
+Inserting malicious USB devices
+Downloading malicious software
+
+Statistics show that 81% of breaches involve weak or stolen passwords.
+
+Weak password example:
+
+"tryhackme"
+
+If password exists in data breaches, attackers can use it to gain access.
+
+Rubber Ducky USB attack example:
+
+Rubber Ducky is a malicious USB device that executes commands automatically when inserted.
+
+It can install malware and give attackers access to the system.
+
+4. Software Vulnerabilities
+
+Software vulnerabilities are weaknesses in software that attackers exploit.
+
+Every software contains vulnerabilities.
+
+Some vulnerabilities exist for many years before discovery.
+
+Example:
+Shellshock vulnerability existed from 1992 to 2014.
+
+Zero-day vulnerability is a vulnerability unknown to vendor and public.
+
+Attackers exploit zero-day vulnerabilities before patches are available.
+
+Once vulnerability is discovered, it receives a CVE (Common Vulnerabilities and Exposures) ID.
+
+Example:
+CVE-2017-0144 (EternalBlue)
+CVE-2021-34527 (PrintNightmare)
+
+Patch is the official fix released by vendor to correct vulnerability.
+
+Patch management is critical to prevent exploitation.
+
+5. Misconfigurations
+
+Misconfiguration is a security weakness caused by incorrect system setup.
+
+Misconfiguration is not a software bug, but a human configuration mistake.
+
+Examples include:
+
+Weak passwords
+Default credentials
+Disabled firewall
+Exposed database to internet
+Open cloud storage
+
+Example attack scenario:
+
+Database installed securely
+Admin sets weak password "1111"
+Firewall disabled
+Database exposed to internet
+Attackers access database and steal data
+
+Misconfigurations are common causes of breaches.
+
+6. Supply Chain Attacks
+
+Supply chain attacks target trusted software, libraries, or vendors.
+
+Attackers compromise software vendor and distribute malicious updates.
+
+Users install update thinking it is safe.
+
+Example attacks:
+
+SolarWinds attack
+3CX attack
+
+Supply chain attacks can affect thousands of systems at once.
+
+These attacks are difficult to prevent.
+
+SOC must detect suspicious activity after infection.
+
+7. Importance of Patch Management
+
+Patch management is the process of updating systems to fix vulnerabilities.
+
+Without patching, attackers exploit known vulnerabilities easily.
+
+Patch management reduces attack surface significantly.
+
+SOC must monitor systems until patches are applied.
+
+8. Importance of Proper System Configuration
+
+Systems must be configured securely.
+
+Secure configuration includes:
+
+Strong passwords
+Firewall enabled
+Restricted access
+Secure network configuration
+
+Poor configuration leads to system compromise.
+
+9. Antivirus and Endpoint Protection
+
+Antivirus and EDR solutions protect systems by detecting and blocking malware.
+
+Examples:
+
+Microsoft Defender
+CrowdStrike
+SentinelOne
+
+These tools monitor system processes and detect malicious behavior.
+
+They prevent malware execution.
+
+10. Network Protection
+
+Network protection restricts system access to trusted users and networks.
+
+Methods include:
+
+Firewall configuration
+IP access restrictions
+Network segmentation
+
+Restricting access reduces risk of unauthorized access.
+
+11. Role of SOC Analyst in Protecting Systems
+
+SOC analysts monitor systems continuously.
+
+SOC responsibilities include:
+
+Detecting suspicious system activity
+Investigating security alerts
+Identifying compromised systems
+Responding to incidents
+Monitoring vulnerability exploitation
+Detecting malware infections
+
+SOC uses tools such as:
+
+SIEM
+EDR
+Log monitoring systems
+
+SOC is responsible for detection and response.
+
+12. Mitigation vs Detection
+
+Mitigation focuses on preventing attacks.
+
+Examples include:
+
+Patch management
+Secure configuration
+Antivirus protection
+Network protection
+
+Detection focuses on identifying attacks that bypass mitigation.
+
+SOC performs detection and investigation.
+
+SOC is last line of defense.
+
+13. Common System Attack Techniques
+
+Attackers use:
+
+Weak passwords
+Malware
+Vulnerability exploitation
+Misconfigurations
+Supply chain compromise
+
+Attackers scan internet for exposed systems.
+
+Tools like Shodan help attackers find vulnerable systems.
+
+14. SOC Investigation Workflow for System Attacks
+
+Attack occurs
+System compromised
+Security tools generate alert
+SOC analyst investigates alert
+SOC confirms compromise
+SOC contains incident
+SOC recommends mitigation
+
+SOC protects organization infrastructure.
+
+15. Key SOC Analyst Learning Outcomes
+
+Understanding system attack vectors
+Understanding vulnerabilities and CVE system
+Understanding misconfiguration risks
+Understanding supply chain attacks
+Understanding mitigation and detection strategies
+Understanding SOC role in protecting systems
