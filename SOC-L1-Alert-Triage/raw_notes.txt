@@ -1,0 +1,365 @@
+SOC Alert Triage – Study Notes
+Overview
+
+This room focuses on understanding how alerts are generated, prioritised, and triaged inside a Security Operations Center (SOC). It covers the operational workflow followed by SOC L1 analysts when handling alerts inside a SIEM dashboard.
+
+1. From Events to Alerts
+Event → Log → Alert Flow
+
+Event occurs
+
+User login
+
+Process execution
+
+File download
+
+Network connection
+
+System generates logs
+
+OS logs
+
+Firewall logs
+
+Cloud logs
+
+Application logs
+
+Logs sent to security platform
+
+SIEM
+
+EDR
+
+NDR
+
+Detection rule triggers
+
+If rule condition matches log pattern
+
+Alert is created
+
+Purpose of alerts:
+Reduce millions of logs into manageable suspicious items for analysts.
+
+2. Alert Management Platforms
+SIEM
+
+Central log aggregation
+
+Rule-based detection
+
+Alert dashboard
+
+EDR / NDR
+
+Endpoint or network focused detection
+
+Often integrated with SIEM
+
+SOAR
+
+Automates response
+
+Uses playbooks
+
+ITSM
+
+Ticket management
+
+Alert tracking and ownership
+
+3. Alert Properties (Important for Triage)
+1. Alert Time
+
+When alert was created
+
+May differ from actual event time
+
+2. Alert Name
+
+Detection rule name
+
+Summary of suspicious activity
+
+Examples:
+
+Unusual VPN Login Location
+
+Double Extension File Creation
+
+Potential Data Exfiltration
+
+3. Alert Severity
+
+Low
+
+Medium
+
+High
+
+Critical
+
+Severity defines urgency.
+
+4. Alert Status
+
+New
+
+In Progress
+
+Closed
+
+Custom statuses
+
+5. Alert Verdict
+
+True Positive (Real threat)
+
+False Positive (Benign activity)
+
+6. Alert Assignee
+
+Analyst responsible for investigation
+
+7. Alert Description
+
+Includes:
+
+Detection logic
+
+Why activity is suspicious
+
+Optional triage guidance
+
+8. Alert Fields (Indicators)
+
+Examples:
+
+Username
+
+Hostname
+
+IP address
+
+File path
+
+Process name
+
+Hash
+
+URL
+
+These are the core investigation data points.
+
+4. Alert Prioritisation
+
+When multiple alerts exist:
+
+Step 1 – Filter
+
+Only take:
+
+New
+
+Unassigned
+
+Awaiting action
+
+Do not take:
+
+Closed
+
+Already In Progress
+
+Step 2 – Sort by Severity
+
+Order:
+
+Critical
+
+High
+
+Medium
+
+Low
+
+Step 3 – Sort by Time
+
+If same severity:
+
+Oldest first
+
+Reason:
+Older breach may already be progressing.
+
+Priority Formula:
+
+Severity > Time > Ownership
+
+5. Alert Triage Workflow
+
+Alert triage = structured investigation process.
+
+Phase 1 – Initial Actions
+
+Prioritise alert
+
+Assign to yourself
+
+Move to “In Progress”
+
+Read alert name & description
+
+Identify key fields (user, host, IP, file, process)
+
+Phase 2 – Investigation
+Step 1: Identify Who is at Risk
+
+Which user?
+
+Which host?
+
+Is it privileged account?
+
+Is it sensitive department?
+
+Step 2: Understand What Happened
+
+Was it:
+
+Suspicious login?
+
+Malware?
+
+Phishing?
+
+Data exfiltration?
+
+Step 3: Check Surrounding Events
+
+Look for:
+
+Activity before alert
+
+Activity after alert
+
+Lateral movement
+
+File execution
+
+Data transfer
+
+Golden rule:
+Alerts rarely exist in isolation.
+
+Step 4: Use Threat Intelligence
+
+Check file hash reputation
+
+Check IP reputation
+
+Check domain reputation
+
+6. Making the Final Decision
+
+After investigation, decide:
+
+False Positive
+
+Legitimate user activity
+
+VPN/travel explanation
+
+IT administrative activity
+
+No malicious follow-up behavior
+
+True Positive
+
+Confirmed malware
+
+Suspicious login + malicious behavior
+
+Data exfiltration
+
+Credential dumping tools detected
+
+7. Writing Investigation Comment
+
+Comment should include:
+
+What was detected
+
+What was reviewed
+
+Key findings
+
+Final verdict
+
+Justification
+
+Example Structure:
+
+Alert reviewed
+
+User login analysed
+
+No suspicious follow-up activity
+
+IP belongs to corporate VPN
+
+Verdict: False Positive
+
+8. Escalation Logic
+
+Escalate to L2 when:
+
+Confirmed compromise
+
+Advanced attack techniques
+
+Privileged account involved
+
+Scope exceeds L1 authority
+
+9. Closing the Alert
+
+Final steps:
+
+Set verdict
+
+Add detailed comment
+
+Move status to Closed
+
+If values are incorrect:
+
+No completion flag will be generated
+
+Key Concepts Summary
+
+Event → Log → Detection Rule → Alert
+
+Alert prioritisation prevents missing critical threats
+
+Severity determines urgency
+
+Triage requires structured thinking
+
+Always document investigation
+
+Evidence-based decision making is mandatory
+
+Core SOC L1 Mindset
+
+Do not assume
+
+Do not panic
+
+Follow structured workflow
+
+Investigate surrounding context
+
+Justify every verdict
