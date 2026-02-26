@@ -1,0 +1,113 @@
+Room: SOC Reporting & Escalation
+Platform: TryHackMe
+
+===============================
+ALERT LIFECYCLE AFTER TRIAGE
+===============================
+
+L1 receives alerts
+↓
+Triage (True/False Positive)
+↓
+Report Writing
+↓
+Escalation (if required)
+↓
+L2 Deep Investigation
+↓
+Remediation / Incident Response
+
+================================
+WHY L1 REPORTING IS IMPORTANT
+================================
+
+1. Provides context for escalation
+   - Saves L2 time
+   - Prevents re-investigation
+
+2. Preserves evidence
+   - Raw logs retained 3–12 months
+   - Alerts stored indefinitely
+   - Reports act as audit records
+
+3. Improves investigation skills
+   - Forces structured thinking
+   - Enhances analytical clarity
+
+=====================
+5W REPORT STRUCTURE
+=====================
+
+WHO:
+- Affected user
+- Privilege level
+
+WHAT:
+- Exact action performed
+- Commands executed
+- Files downloaded
+
+WHEN:
+- Start and end time
+- Timezone
+
+WHERE:
+- Hostname
+- IP address
+- Domain
+- URL
+
+WHY:
+- Reasoning behind verdict
+- Evidence supporting True/False Positive
+
+=====================
+ESCALATION CRITERIA
+=====================
+
+Escalate when:
+
+- Confirmed compromise
+- Malware execution
+- Lateral movement
+- Data exfiltration
+- Privileged account involved
+- Remediation required
+- External communication required
+- Analyst unsure
+
+=====================
+ESCALATION STEPS
+=====================
+
+1. Move alert to In Progress
+2. Complete investigation
+3. Write structured report
+4. Set verdict (True Positive)
+5. Reassign to L2
+6. Notify L2
+
+=====================
+L1 vs L2
+=====================
+
+L1:
+- Triage
+- Basic investigation
+- Documentation
+
+L2:
+- Deep analysis
+- Containment
+- Remediation
+- Incident Response
+
+=====================
+KEY SKILLS GAINED
+=====================
+
+- Structured alert reporting
+- Escalation judgment
+- Incident documentation
+- Communication discipline
+- SOC workflow understanding
