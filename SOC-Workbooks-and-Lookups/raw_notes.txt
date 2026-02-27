@@ -1,0 +1,306 @@
+📘 Room: Identity, Assets, Network Context & SOC Workbooks
+
+(Raw Study Notes – SOC L1 Focus)
+
+1️⃣ Identity Inventory
+Definition
+
+Identity inventory = database of all corporate identities:
+
+Employees (user accounts)
+
+Service accounts
+
+Machine accounts
+
+Contains:
+
+Full name
+
+Role / Job title
+
+Department
+
+Manager
+
+Working hours
+
+Access privileges
+
+Contact details
+
+Why SOC Needs It
+
+Used during alert triage to answer:
+
+Who is this user?
+
+Is this action normal for their role?
+
+Is this within working hours?
+
+Should they have access to this system?
+
+Example Use Case
+
+Alert: G.Baker accessed Finance Server.
+
+Check:
+
+Is G.Baker in Finance?
+
+Does their role require financial file access?
+
+Was access during normal hours?
+
+If yes → Possibly normal
+If no → Suspicious
+
+Sources of Identity Inventory
+
+Active Directory (On-prem AD, Entra ID)
+
+SSO Providers (Okta, Google Workspace)
+
+HR Systems (BambooHR, SAP)
+
+Custom Excel/CSV maintained by IT
+
+2️⃣ Asset Inventory
+Definition
+
+Asset inventory = list of all corporate IT assets (servers & workstations).
+
+Contains:
+
+Hostname
+
+IP address
+
+Subnet
+
+Department owner
+
+Purpose of server
+
+Data stored
+
+Installed software
+
+Why SOC Needs It
+
+To understand:
+
+What is this server used for?
+
+Is it sensitive?
+
+Who should access it?
+
+Example
+
+HQ-FINFS-02
+
+Breakdown:
+
+HQ → Headquarters
+
+FIN → Finance
+
+FS → File Server
+
+02 → Instance number
+
+Likely stores:
+
+Financial records
+
+Accounting data
+
+If Sales employee accesses it → Investigate.
+
+Sources of Asset Inventory
+
+Active Directory
+
+SIEM / EDR (Elastic, CrowdStrike)
+
+MDM (Intune, Jamf)
+
+Custom Excel sheets
+
+3️⃣ Network Diagrams
+Definition
+
+Visual map of:
+
+Subnets
+
+Firewall
+
+Servers
+
+VPN
+
+Connections between networks
+
+Why SOC Needs It
+
+To understand:
+
+What subnet an IP belongs to
+
+What services are exposed
+
+Attack path reconstruction
+
+Lateral movement attempts
+
+Example Scenario
+
+External IP: 103.61.240.174
+Port: TCP/10443
+
+10443 = VPN service
+
+Steps:
+
+External IP brute forces VPN
+
+Gets internal IP (10.10.0.53)
+
+Scans Database subnet (172.16.15.0/24)
+
+Scans Office subnet (172.16.23.0/24)
+
+Interpretation:
+
+Compromised VPN credentials
+
+Internal reconnaissance
+
+Lateral movement attempt
+
+4️⃣ Enrichment Process
+Definition
+
+Enrichment = gathering additional context about:
+
+User
+
+Host
+
+IP address
+
+Using:
+
+Identity inventory
+
+Asset inventory
+
+Threat Intelligence (TI)
+
+SIEM logs
+
+Goal:
+Reduce uncertainty before verdict.
+
+5️⃣ SOC Workbooks (Playbooks / Runbooks)
+Definition
+
+Structured investigation guide that defines:
+
+Exact triage steps
+
+Decision points
+
+Escalation criteria
+
+Created by:
+
+Senior analysts (L2/L3)
+
+Used mostly by:
+
+SOC L1 Analysts
+
+Workbook Structure
+1️⃣ Enrichment
+
+Check user in HR system (e.g., BambooHR)
+
+Check IP in Threat Intel
+
+Validate login location
+
+2️⃣ Investigation
+
+Check SIEM logs
+
+Review user behavior
+
+Check login history (e.g., 90 days)
+
+Look for suspicious actions
+
+3️⃣ Escalation
+
+Close alert (if safe)
+
+Contact user (if uncertain)
+
+Escalate to L2 (if suspicious)
+
+6️⃣ Email with Script/Binary Attachment Workbook Flow
+
+Correct order:
+
+Analyze email (SPF/DKIM/domain reputation)
+
+Analyze attachment (sandbox/manual review)
+
+Check recipient login activity
+
+Gather triage evidence
+
+Escalate to L2 (if malicious)
+
+Do NOT:
+
+Notify entire company without approval
+
+Skip attachment analysis
+
+Close alert without evidence
+
+7️⃣ Core SOC L1 Thinking Model
+
+Always ask:
+
+WHO did it? (Identity)
+
+WHAT system? (Asset)
+
+WHERE in network? (Subnet/Diagram)
+
+WHEN? (Time context)
+
+WHY? (Business logic)
+
+IS IT NORMAL for this role?
+
+8️⃣ Key Concepts to Remember
+
+Identity inventory gives user context.
+
+Asset inventory gives system context.
+
+Network diagram gives infrastructure context.
+
+Enrichment reduces false positives.
+
+Workbooks prevent missed steps.
+
+L1 must follow structured process.
+
+Never make verdict without evidence.
