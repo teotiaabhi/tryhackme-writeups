@@ -1,0 +1,162 @@
+🧠 SOC Main Goal
+
+Protect:
+
+Confidentiality
+
+Integrity
+
+Availability
+
+SOC workflow:
+Alert → L1 triage → Escalation → Containment
+
+📊 SOC Performance Metrics
+1️⃣ Alerts Count (AC)
+
+AC = Total Alerts Received
+
+Measures:
+
+SOC workload
+
+Ideal:
+5–30 alerts per day per L1
+
+Too High:
+
+Analyst fatigue
+
+Missed threats
+
+Too Low:
+
+Detection failure
+
+SIEM visibility issue
+
+2️⃣ False Positive Rate (FPR)
+
+FPR = False Positives / Total Alerts
+
+Example:
+40 false out of 50 alerts → 80%
+
+High FPR causes:
+
+Alert fatigue
+
+Poor vigilance
+
+Risk of missing real threats
+
+Fix:
+
+Tune detection rules
+
+Exclude IT/system noise
+
+Automate repetitive triage
+
+3️⃣ Alert Escalation Rate (AER)
+
+AER = Escalated Alerts / Total Alerts
+
+Measures:
+
+L1 confidence level
+
+Too High:
+
+L1 lacks experience
+
+Too Low:
+
+Overconfidence
+
+Missed threats
+
+Target:
+Below 50% (preferably below 20%)
+
+4️⃣ Threat Detection Rate (TDR)
+
+TDR = Detected Threats / Total Threats
+
+Measures:
+
+SOC effectiveness
+
+Ideal:
+100%
+
+Missed threats = severe business impact
+
+⏱ SLA Metrics
+MTTD – Mean Time to Detect
+
+Time between attack and alert generation
+
+Tool performance metric
+
+MTTA – Mean Time to Acknowledge
+
+Time between alert generation and L1 starting triage
+
+L1 responsibility metric
+
+MTTR – Mean Time to Respond
+
+Time between detection and containment
+
+SOC operational maturity metric
+
+🔧 Improving Metrics
+
+High FPR:
+
+False positive remediation
+
+Detection rule tuning
+
+Remove IT noise
+
+High MTTD:
+
+Tune detection rule frequency
+
+Check real-time log ingestion
+
+High MTTA:
+
+Improve notifications
+
+Balance analyst workload
+
+High MTTR:
+
+Create workbooks
+
+Improve escalation process
+
+Document response steps
+
+📌 Key Insight
+
+Metrics:
+
+Improve SOC efficiency
+
+Evaluate analyst performance
+
+Support career growth
+
+L1 directly impacts:
+
+MTTA
+
+Escalation quality
+
+Documentation
+
+Noise feedback
