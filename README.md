@@ -102,6 +102,6 @@ No sensitive data, flags, or full solutions are shared.
 
 ## Progress
 
-- Rooms completed: 70+  
+- Rooms completed: 90+  
 - Focus areas: Linux, Networking, Privilege Escalation, Web Security  
 - Status: Actively learning and updating  
