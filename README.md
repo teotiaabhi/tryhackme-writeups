@@ -1,7 +1,7 @@
 # tryhackme-writeups
 # TryHackMe Cybersecurity Writeups
 
-This repository documents my hands-on cybersecurity learning journey through TryHackMe, where I have completed 93+ practical labs and achieved a global rank in the top 6%.
+This repository documents my hands-on cybersecurity learning journey through TryHackMe, where I have completed 93 practical labs and achieved a global rank in the top 6%.
 
 It contains structured writeups, commands used, tools practiced, and key concepts learned while working on real-world simulated security scenarios.
 
